@@ -8,10 +8,12 @@ Bootstrap(app)
 
 def get_ipaddress():
     ip = None
-    for iface in ni.interfaces():
-        if iface == 'lo0':
+    for interface in ni.interfaces():
+        if interface == 'lo':
             continue
-        ip = ni.ifaddresses(iface)[2][0]['addr']
+        data = ni.ifaddresses(interface)
+        if 2 in data:
+            ip = data[2][0]['addr']
     return ip
 
 @app.route('/')
@@ -19,7 +21,8 @@ def get_ipaddress():
 def index():
     hostname = socket.gethostname()
     ip = get_ipaddress()
-    return render_template('index.html', hostname=hostname, ip=ip)
+    return render_template('dash.html', hostname=hostname, ip=ip)
+
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0',port='8080')
+    app.run(host='0.0.0.0',port=8080, debug=True)
