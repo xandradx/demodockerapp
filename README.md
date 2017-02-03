@@ -3,3 +3,4 @@ Application demo for docker written in python and flask framework, for demo Open
 
 ## Usage
 
+## Version 1.0
