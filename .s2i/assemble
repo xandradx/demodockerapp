@@ -1,0 +1,4 @@
+#!/bin/bash
+
+echo "CUSTOM BUILD"
+exec /usr/libexec/s2i/assemble
