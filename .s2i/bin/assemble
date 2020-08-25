@@ -5,5 +5,7 @@ echo "CUSTOM BUILD"
 
 echo $PWD
 find TLS
+id
+sudo -l
 
 exec /usr/libexec/s2i/assemble
