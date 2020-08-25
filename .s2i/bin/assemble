@@ -3,6 +3,7 @@
 
 echo "CUSTOM BUILD"
 
-find /run/secrets
+echo $PWD
+find TLS
 
 exec /usr/libexec/s2i/assemble
