@@ -4,8 +4,6 @@
 
 echo "CUSTOM BUILD"
 
-id
-whoami
-find /var/run/secrets/
+ls /var/run/secrets/openshift.io/build/ca-nexus/
 
 exec /usr/libexec/s2i/assemble
