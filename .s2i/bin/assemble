@@ -3,6 +3,6 @@
 
 echo "CUSTOM BUILD"
 
-find /tmp
+find /var/run/secrets/
 
 exec /usr/libexec/s2i/assemble
