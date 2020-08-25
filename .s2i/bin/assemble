@@ -1,9 +1,8 @@
 #!/bin/bash
 
-sleep 30000
 
 echo "CUSTOM BUILD"
 
-ls /var/run/secrets/openshift.io/build/ca-nexus/
+ls /run/secrets
 
 exec /usr/libexec/s2i/assemble
