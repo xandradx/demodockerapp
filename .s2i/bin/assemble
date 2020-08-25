@@ -6,6 +6,6 @@ echo "CUSTOM BUILD"
 echo $PWD
 find TLS
 id
-sudo -l
+update-ca-trust
 
 exec /usr/libexec/s2i/assemble
