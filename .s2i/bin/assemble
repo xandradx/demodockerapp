@@ -1,8 +1,11 @@
 #!/bin/bash
 
 
+
 echo "CUSTOM BUILD"
 
+id
+whoami
 find /var/run/secrets/
 
 exec /usr/libexec/s2i/assemble
